@@ -10,6 +10,7 @@ import TestimonialSection from "./TestimonialSection";
 import StatsBanner from "./StatsBanner";
 import ComparisonSection from "./ComparisonSection";
 import CTASection from "./CTASection";
+import { Button } from "./ui/button";
 
 const Home = () => {
   const { theme, toggleTheme } = useTheme();

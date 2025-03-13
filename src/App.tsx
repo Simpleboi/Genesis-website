@@ -5,6 +5,7 @@ import Documentation from "./components/Documentation";
 import Download from "./components/Download";
 import Examples from "./components/Examples";
 import Community from "./components/Community";
+import Playground from "./components/Playground";
 import routes from "tempo-routes";
 import { ThemeProvider } from "./components/ThemeProvider";
 
@@ -20,6 +21,7 @@ function App() {
             <Route path="/download" element={<Download />} />
             <Route path="/examples" element={<Examples />} />
             <Route path="/community" element={<Community />} />
+            <Route path="/playground" element={<Playground />} />
           </Routes>
           {import.meta.env.VITE_TEMPO === "true" && useRoutes(routes)}
         </>
