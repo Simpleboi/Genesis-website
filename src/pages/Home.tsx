@@ -1,16 +1,15 @@
 import React from "react";
-import { useTheme } from "./ThemeProvider";
-import Navbar from "./Navbar";
-import FeaturesSection from "./FeaturesSection";
-import CodeEditor from "./CodeEditor";
-import Footer from "./Footer";
+import { useTheme } from "@/components/ThemeProvider";
+import Navbar from "@/components/Navbar";
+import FeaturesSection from "@/components/FeaturesSection";
+import CodeEditor from "@/components/CodeEditor";
+import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import HeroSection from "./HeroSection";
-import TestimonialSection from "./TestimonialSection";
-import StatsBanner from "./StatsBanner";
-import ComparisonSection from "./ComparisonSection";
-import CTASection from "./CTASection";
-import { Button } from "./ui/button";
+import HeroSection from "@/components/HeroSection";
+import TestimonialSection from "@/components/TestimonialSection";
+import StatsBanner from "@/components/StatsBanner";
+import ComparisonSection from "@/components/ComparisonSection";
+import CTASection from "@/components/CTASection";
 
 const Home = () => {
   const { theme, toggleTheme } = useTheme();

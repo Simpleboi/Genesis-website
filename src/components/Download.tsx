@@ -6,7 +6,6 @@ import { Button } from "./ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { Card } from "./ui/card";
 import {
-  ChevronRight,
   Download as DownloadIcon,
   Terminal,
   Code,
@@ -74,11 +73,11 @@ const Download = () => {
   const { theme, toggleTheme } = useTheme();
 
   const installCommands = {
-    npm: "npm install -g genesis-lang",
-    brew: "brew install genesis-lang",
-    apt: "sudo apt-get install genesis-lang",
-    yum: "sudo yum install genesis-lang",
-    docker: "docker pull genesis-lang/genesis:latest",
+    npm: "npm install -g genesis-project",
+    brew: "brew install genesis-project",
+    apt: "sudo apt-get install genesis-project",
+    yum: "sudo yum install genesis-project",
+    docker: "docker pull genesis-project/genesis:latest",
   };
 
   return (

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 interface AnimatedCodeBlockProps {
@@ -55,7 +55,7 @@ const AnimatedCodeBlock = ({
           <div className="w-3 h-3 rounded-full bg-green-500"></div>
         </div>
         <div className="text-xs text-muted-foreground">
-          {language === "typescript" ? "main.genesis" : language}
+          {language === "typescript" ? "main.gen" : language}
         </div>
       </div>
       <pre className="p-4 text-sm font-mono overflow-x-auto">
