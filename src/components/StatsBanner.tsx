@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 interface StatProps {
@@ -63,12 +63,12 @@ const StatsBanner = () => {
     <section className="py-12 px-4 md:px-8 bg-primary/5">
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <AnimatedStat label="Downloads" value={1250000} suffix="+" />
-          <AnimatedStat label="GitHub Stars" value={28500} suffix="+" />
-          <AnimatedStat label="Contributors" value={450} suffix="+" />
+          <AnimatedStat label="Downloads" value={100} suffix="+" />
+          <AnimatedStat label="GitHub Stars" value={100} suffix="+" />
+          <AnimatedStat label="Contributors" value={100} suffix="+" />
           <AnimatedStat
             label="Companies Using Genesis"
-            value={3200}
+            value={100}
             suffix="+"
           />
         </div>

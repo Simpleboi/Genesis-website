@@ -1,4 +1,3 @@
-import React from "react";
 import { useTheme } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
 import FeaturesSection from "@/components/FeaturesSection";
