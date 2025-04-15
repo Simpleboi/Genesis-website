@@ -8,6 +8,7 @@ import SyntaxGuide from "@/features/Documentation/SyntaxGuide";
 import VariableGuide from "@/features/Documentation/VariableGuide";
 import FunctionsGuide from "@/features/Documentation/FunctionsGuide";
 import ControlFlowGuide from "@/features/Documentation/ControlFlowGuide";
+import ClassesAndObjectsGuide from "@/features/Documentation/ClassesAndObjectsGuide";
 
 import { ChevronRight } from "lucide-react";
 import { DocSideBar } from "@/features/Documentation/DocSideBar";
@@ -65,6 +66,8 @@ const Documentation = () => {
                     return <FunctionsGuide />
                   case "control flow":
                     return <ControlFlowGuide />
+                  case "classes & objects":
+                    return <ClassesAndObjectsGuide />
                   default:
                     return <DocIntroduction />;
                 }
