@@ -1,4 +1,3 @@
-import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
