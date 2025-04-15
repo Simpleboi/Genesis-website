@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { useRoutes, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Documentation from "./components/Documentation";
+import Documentation from "./pages/Documentation";
 import Download from "./components/Download";
 import Examples from "./components/Examples";
 import Community from "./components/Community";
