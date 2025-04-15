@@ -11,6 +11,7 @@ import ControlFlowGuide from "@/features/Documentation/ControlFlowGuide";
 import ClassesAndObjectsGuide from "@/features/Documentation/ClassesAndObjectsGuide";
 import ErrorHandlingGuide from "@/features/Documentation/ErrorHandlingGuide";
 import DataStructuresGuide from "@/features/Documentation/DataStructuresGuide";
+import ConcurrencyGuide from "@/features/Documentation/ConcurrencyGuide";
 
 import { ChevronRight } from "lucide-react";
 import { DocSideBar } from "@/features/Documentation/DocSideBar";
@@ -74,6 +75,8 @@ const Documentation = () => {
                     return <ClassesAndObjectsGuide />
                   case "error handling":
                     return <ErrorHandlingGuide />
+                  case "concurrency":
+                    return <ConcurrencyGuide />
                   default:
                     return <DocIntroduction />;
                 }
