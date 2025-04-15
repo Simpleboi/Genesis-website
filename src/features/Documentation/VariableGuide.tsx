@@ -1,17 +1,16 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
-import { Card } from "./ui/card";
-import { Button } from "./ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
-const SyntaxGuide = () => {
+const VariableGuide = () => {
   return (
     <div className="space-y-8">
       <div>
         <h1 className="text-4xl font-bold tracking-tight mb-4">
-          Genesis Syntax
+          Variables
         </h1>
         <p className="text-xl text-muted-foreground">
-          Learn the elegant and expressive syntax of the Genesis programming
-          language.
+          Learn how variables are defined, declared, and used in the Genesis language.
         </p>
       </div>
 
@@ -512,4 +511,4 @@ for case let .point(x, y) in shapes {
   );
 };
 
-export default SyntaxGuide;
+export default VariableGuide;

@@ -3,10 +3,11 @@ import { useTheme } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import SyntaxGuide from "@/components/SyntaxGuide";
-import {
-  ChevronRight,
-} from "lucide-react";
+
+import SyntaxGuide from "@/features/Documentation/SyntaxGuide";
+import VariableGuide from "@/features/Documentation/VariableGuide";
+
+import { ChevronRight } from "lucide-react";
 import { DocSideBar } from "@/features/Documentation/DocSideBar";
 import { DocIntroduction } from "@/features/Documentation/DocIntroduction";
 
@@ -15,17 +16,18 @@ const Documentation = () => {
   const { theme, toggleTheme } = useTheme();
   const [currentPage, setCurrentPage] = useState("introduction");
 
-
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col">
       <Navbar onThemeToggle={toggleTheme} isDarkMode={theme === "dark"} />
 
       <div className="container mx-auto px-4 py-8 flex-grow">
         <div className="flex flex-col md:flex-row gap-8">
+          
           {/* Sidebar */}
-          <DocSideBar 
-          currentPage={currentPage}
-          onPageChange={(newPage) => setCurrentPage(newPage)}/>
+          <DocSideBar
+            currentPage={currentPage}
+            onPageChange={(newPage) => setCurrentPage(newPage)}
+          />
 
           {/* Main Content */}
           <main className="flex-1 min-w-0">
@@ -48,12 +50,19 @@ const Documentation = () => {
                 </span>
               </div>
 
-              {/* Content */}
-              {currentPage === "syntax" ? (
-                <SyntaxGuide />
-              ) : (
-                <DocIntroduction />
-              )}
+              {/* Renderes a component based on Sidebar links */}
+              {(() => {
+                switch (currentPage) {
+                  case "introduction":
+                    return <DocIntroduction />;
+                  case "syntax":
+                    return <SyntaxGuide />;
+                  case "variables":
+                    return <VariableGuide />;
+                  default:
+                    return <DocIntroduction />;
+                }
+              })()}
 
               {/* Navigation Buttons */}
               <div className="flex justify-between pt-8 border-t">

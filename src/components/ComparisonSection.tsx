@@ -225,7 +225,7 @@ const ComparisonSection = () => {
                               <X className="h-5 w-5 text-red-500 mx-auto" />
                             )}
                           </td>
-                        ),
+                        )
                       )}
                     </motion.tr>
                   ))}
