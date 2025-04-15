@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 import { Separator } from "./ui/separator";
@@ -36,7 +35,7 @@ const Footer = ({
     {
       title: "Community",
       items: [
-        { name: "GitHub", href: "https://github.com/genesis-lang" },
+        { name: "GitHub", href: "https://github.com/Simpleboi/Genesis" },
         { name: "Discord", href: "/discord" },
         { name: "Twitter", href: "https://twitter.com/genesislang" },
         {
@@ -56,7 +55,7 @@ const Footer = ({
     },
   ],
   socialLinks = {
-    github: "https://github.com/genesis-lang",
+    github: "https://github.com/Simpleboi/Genesis",
     twitter: "https://twitter.com/genesislang",
     linkedin: "https://linkedin.com/company/genesis-lang",
     email: "mailto:info@genesislang.org",
