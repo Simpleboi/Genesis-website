@@ -9,6 +9,8 @@ import VariableGuide from "@/features/Documentation/VariableGuide";
 import FunctionsGuide from "@/features/Documentation/FunctionsGuide";
 import ControlFlowGuide from "@/features/Documentation/ControlFlowGuide";
 import ClassesAndObjectsGuide from "@/features/Documentation/ClassesAndObjectsGuide";
+import ErrorHandlingGuide from "@/features/Documentation/ErrorHandlingGuide";
+import DataStructuresGuide from "@/features/Documentation/DataStructuresGuide";
 
 import { ChevronRight } from "lucide-react";
 import { DocSideBar } from "@/features/Documentation/DocSideBar";
@@ -66,8 +68,12 @@ const Documentation = () => {
                     return <FunctionsGuide />
                   case "control flow":
                     return <ControlFlowGuide />
+                  case "data structures":
+                    return <DataStructuresGuide />
                   case "classes & objects":
                     return <ClassesAndObjectsGuide />
+                  case "error handling":
+                    return <ErrorHandlingGuide />
                   default:
                     return <DocIntroduction />;
                 }
