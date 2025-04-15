@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 
 import SyntaxGuide from "@/features/Documentation/SyntaxGuide";
 import VariableGuide from "@/features/Documentation/VariableGuide";
+import FunctionsGuide from "@/features/Documentation/FunctionsGuide";
 
 import { ChevronRight } from "lucide-react";
 import { DocSideBar } from "@/features/Documentation/DocSideBar";
@@ -59,6 +60,8 @@ const Documentation = () => {
                     return <SyntaxGuide />;
                   case "variables":
                     return <VariableGuide />;
+                  case "functions":
+                    return <FunctionsGuide />
                   default:
                     return <DocIntroduction />;
                 }
