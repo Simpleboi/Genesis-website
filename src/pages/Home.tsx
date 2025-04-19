@@ -1,14 +1,14 @@
 import { useTheme } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
-import FeaturesSection from "@/components/FeaturesSection";
+import FeaturesSection from "@/features/Home/FeaturesSection";
 import CodeEditor from "@/components/CodeEditor";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import HeroSection from "@/components/HeroSection";
-import TestimonialSection from "@/components/TestimonialSection";
-import StatsBanner from "@/components/StatsBanner";
-import ComparisonSection from "@/components/ComparisonSection";
-import CTASection from "@/components/CTASection";
+import TestimonialSection from "@/features/Home/TestimonialSection";
+import StatsBanner from "@/features/Home/StatsBanner";
+import ComparisonSection from "@/features/Home/ComparisonSection";
+import CTASection from "@/features/Home/CTASection";
 
 const Home = () => {
   const { theme, toggleTheme } = useTheme();
