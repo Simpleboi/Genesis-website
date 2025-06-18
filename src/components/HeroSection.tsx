@@ -76,7 +76,6 @@ void main() {
   );
 };
 
-
 // Handles the Stars
 export const HeroStarStats = () => {
   return (
@@ -86,9 +85,7 @@ export const HeroStarStats = () => {
         className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
         target="_blank"
       >
-        <a href="#">
-          <i className="bx bxl-github github-hero"></i>
-        </a>
+        <i className="bx bxl-github github-hero"></i>
         <span className="mr-1">Star on GitHub</span>
         <span className="flex items-center bg-muted px-2 py-1 rounded-full">
           <Star className="h-3 w-3 mr-1 text-yellow-500" /> 0.0k
@@ -97,6 +94,5 @@ export const HeroStarStats = () => {
     </div>
   );
 };
-
 
 export default HeroSection;

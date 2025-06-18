@@ -14,6 +14,7 @@ import DataStructuresGuide from "@/features/Documentation/DataStructuresGuide";
 import ConcurrencyGuide from "@/features/Documentation/ConcurrencyGuide";
 
 import { GettingStartedInstallation } from "@/features/Documentation/GettingStarted/InstallationStart";
+import { HelloWorldStart } from "@/features/Documentation/GettingStarted/HelloWorldStart";
 
 import { ChevronRight } from "lucide-react";
 import { DocSideBar } from "@/features/Documentation/DocSideBar";
@@ -65,6 +66,8 @@ const Documentation = () => {
                     return <DocIntroduction />;
                   case "installation":
                     return <GettingStartedInstallation />;
+                  case "hello world":
+                    return <HelloWorldStart />;
 
                   // Language Guide
                   case "syntax":
@@ -83,33 +86,6 @@ const Documentation = () => {
                     return <ErrorHandlingGuide />;
                   case "concurrency":
                     return <ConcurrencyGuide />;
-                  default:
-                    return <DocIntroduction />;
-                }
-              })()}
-
-              {(() => {
-                switch (currentPage) {
-                  case "introduction":
-                    return <DocIntroduction />;
-                  case "syntax":
-                    return <SyntaxGuide />;
-                  case "variables":
-                    return <VariableGuide />;
-                  case "functions":
-                    return <FunctionsGuide />;
-                  case "control flow":
-                    return <ControlFlowGuide />;
-                  case "data structures":
-                    return <DataStructuresGuide />;
-                  case "classes & objects":
-                    return <ClassesAndObjectsGuide />;
-                  case "error handling":
-                    return <ErrorHandlingGuide />;
-                  case "concurrency":
-                    return <ConcurrencyGuide />;
-                  case "installation":
-                    return <GettingStartedInstallation />;
                   default:
                     return <DocIntroduction />;
                 }
