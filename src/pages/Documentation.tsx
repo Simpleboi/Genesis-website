@@ -13,6 +13,8 @@ import ErrorHandlingGuide from "@/features/Documentation/ErrorHandlingGuide";
 import DataStructuresGuide from "@/features/Documentation/DataStructuresGuide";
 import ConcurrencyGuide from "@/features/Documentation/ConcurrencyGuide";
 
+import { GettingStartedInstallation } from "@/features/Documentation/GettingStarted/InstallationStart";
+
 import { ChevronRight } from "lucide-react";
 import { DocSideBar } from "@/features/Documentation/DocSideBar";
 import { DocIntroduction } from "@/features/Documentation/DocIntroduction";
@@ -28,7 +30,6 @@ const Documentation = () => {
 
       <div className="container mx-auto px-4 py-8 flex-grow">
         <div className="flex flex-col md:flex-row gap-8">
-          
           {/* Sidebar */}
           <DocSideBar
             currentPage={currentPage}
@@ -59,6 +60,36 @@ const Documentation = () => {
               {/* Renderes a component based on Sidebar links */}
               {(() => {
                 switch (currentPage) {
+                  // Getting Started Section
+                  case "introduction":
+                    return <DocIntroduction />;
+                  case "installation":
+                    return <GettingStartedInstallation />;
+
+                  // Language Guide
+                  case "syntax":
+                    return <SyntaxGuide />;
+                  case "variables":
+                    return <VariableGuide />;
+                  case "functions":
+                    return <FunctionsGuide />;
+                  case "control flow":
+                    return <ControlFlowGuide />;
+                  case "data structures":
+                    return <DataStructuresGuide />;
+                  case "classes & objects":
+                    return <ClassesAndObjectsGuide />;
+                  case "error handling":
+                    return <ErrorHandlingGuide />;
+                  case "concurrency":
+                    return <ConcurrencyGuide />;
+                  default:
+                    return <DocIntroduction />;
+                }
+              })()}
+
+              {(() => {
+                switch (currentPage) {
                   case "introduction":
                     return <DocIntroduction />;
                   case "syntax":
@@ -66,17 +97,19 @@ const Documentation = () => {
                   case "variables":
                     return <VariableGuide />;
                   case "functions":
-                    return <FunctionsGuide />
+                    return <FunctionsGuide />;
                   case "control flow":
-                    return <ControlFlowGuide />
+                    return <ControlFlowGuide />;
                   case "data structures":
-                    return <DataStructuresGuide />
+                    return <DataStructuresGuide />;
                   case "classes & objects":
-                    return <ClassesAndObjectsGuide />
+                    return <ClassesAndObjectsGuide />;
                   case "error handling":
-                    return <ErrorHandlingGuide />
+                    return <ErrorHandlingGuide />;
                   case "concurrency":
-                    return <ConcurrencyGuide />
+                    return <ConcurrencyGuide />;
+                  case "installation":
+                    return <GettingStartedInstallation />;
                   default:
                     return <DocIntroduction />;
                 }

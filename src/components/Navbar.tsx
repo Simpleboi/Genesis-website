@@ -20,6 +20,7 @@ const Navbar = ({
     { name: "Download", href: "/download" },
     { name: "Examples", href: "/examples" },
     { name: "Community", href: "/community" },
+    { name: "Playground", href: "/playground" },
   ];
 
   const toggleMenu = () => {
