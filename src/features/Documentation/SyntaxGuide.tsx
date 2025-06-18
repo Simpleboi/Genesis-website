@@ -1,6 +1,10 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { CodeBlock } from "@/components/Codeblock";
+import { Comments } from "@/lib/SyntaxCode";
+import { Variables } from "@/lib/SyntaxCode";
+import { BasicTypes } from "@/lib/SyntaxCode";
 
 const SyntaxGuide = () => {
   return (
@@ -54,67 +58,34 @@ const SyntaxGuide = () => {
             </p>
 
             <h3 className="text-xl font-semibold mt-8 mb-2">Comments</h3>
-            <pre className="bg-muted p-4 rounded-md overflow-x-auto">
-              <code className="text-sm font-mono">
-                {`// This is a single-line comment
-
-/* This is a multi-line comment
-   that spans multiple lines */
-
-/// Documentation comment for functions and types`}
-              </code>
-            </pre>
+            <CodeBlock code={Comments} />
 
             <h3 className="text-xl font-semibold mt-8 mb-2">
               Variables and Constants
             </h3>
-            <pre className="bg-muted p-4 rounded-md overflow-x-auto">
-              <code className="text-sm font-mono">
-                {`// Variables are declared with 'let'
-let name = "Genesis"    // Type inference
-let age: Int = 30      // Explicit type
-
-// Constants are declared with 'const'
-const PI = 3.14159
-const MAX_USERS: Int = 1000`}
-              </code>
-            </pre>
+            <CodeBlock code={Variables} language="cpp" />
 
             <h3 className="text-xl font-semibold mt-8 mb-2">Basic Types</h3>
-            <pre className="bg-muted p-4 rounded-md overflow-x-auto">
-              <code className="text-sm font-mono">
-                {`// Numeric types
-let integer: Int = 42
-let float: Float = 3.14
-let double: Double = 2.71828
-
-// Boolean
-let isEnabled: Bool = true
-
-// String
-let greeting: String = "Hello, World!"
-
-// Character
-let letter: Char = 'A'
-
-// Type aliases
-type UserId = Int
-let userId: UserId = 12345`}
-              </code>
-            </pre>
+            <CodeBlock code={BasicTypes} language="cpp" />
+            <p className="leading-7 my-4">
+              Genesis supports custom types and type aliases but they are still experimental in version <code>0.9.3</code>, a stable release is planned for version <code>0.9.4</code>
+            </p>
 
             <div className="bg-muted p-6 rounded-lg my-8">
               <h3 className="text-xl font-semibold mb-2">Syntax Conventions</h3>
               <ul className="list-disc pl-6 space-y-1">
                 <li>
-                  Statements don't require semicolons (though they're allowed)
+                  Statements end with a semicolon <code>;</code>.
+                </li>
+                <li>
+                  Strings are enclosed in double quotes <code>"like this"</code>
                 </li>
                 <li>Code blocks are enclosed in curly braces {`{}`}</li>
                 <li>
                   Indentation is not syntactically significant but recommended
                   for readability
                 </li>
-                <li>Type names are capitalized (e.g., Int, String)</li>
+                <li>Type names are lowercased (e.g., int, string)</li>
                 <li>Variable and function names use camelCase</li>
               </ul>
             </div>
