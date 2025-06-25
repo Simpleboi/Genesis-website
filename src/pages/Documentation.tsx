@@ -3,6 +3,7 @@ import { useTheme } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 import SyntaxGuide from "@/features/Documentation/SyntaxGuide";
 import VariableGuide from "@/features/Documentation/VariableGuide";
@@ -43,16 +44,19 @@ const Documentation = () => {
             <div className="space-y-8">
               {/* Breadcrumbs */}
               <div className="flex items-center text-sm text-muted-foreground">
-                <a href="/" className="hover:text-foreground transition-colors">
+                <Link
+                  to="/"
+                  className="hover:text-foreground transition-colors"
+                >
                   Home
-                </a>
+                </Link>
                 <ChevronRight className="h-4 w-4 mx-2" />
-                <a
-                  href="/docs"
+                <Link
+                  to="/docs"
                   className="hover:text-foreground transition-colors"
                 >
                   Documentation
-                </a>
+                </Link>
                 <ChevronRight className="h-4 w-4 mx-2" />
                 <span className="text-foreground">
                   {currentPage.charAt(0).toUpperCase() + currentPage.slice(1)}
