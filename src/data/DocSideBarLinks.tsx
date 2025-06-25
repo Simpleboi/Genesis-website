@@ -19,13 +19,22 @@ export const sidebarLinks = [
       { name: "Variables", href: "/docs/variables" },
       { name: "Functions", href: "/docs/functions" },
       { name: "Control Flow", href: "/docs/control-flow" },
-      { name: "Data Structures", href: "/docs/data-structures" },
-      { name: "Classes & Objects", href: "/docs/classes-objects" },
-      { name: "Error Handling", href: "/docs/error-handling" },
-      { name: "Concurrency", href: "/docs/concurrency" },
     ],
   },
-  {
+];
+
+/*
+Come back to this when they're topics are ready
+
+This is Part of the Language Guide links:
+{ name: "Data Structures", href: "/docs/data-structures" },
+{ name: "Classes & Objects", href: "/docs/classes-objects" },
+{ name: "Error Handling", href: "/docs/error-handling" },
+{ name: "Concurrency", href: "/docs/concurrency" },
+
+-----------------------------------------------
+
+{
     title: "Tools & Ecosystem",
     icon: <Terminal className="h-4 w-4 mr-2" />,
     links: [
@@ -36,7 +45,10 @@ export const sidebarLinks = [
       { name: "IDE Support", href: "/docs/ide-support" },
     ],
   },
-  {
+
+--------------------------------------------
+
+{
     title: "Advanced Topics",
     icon: <FileText className="h-4 w-4 mr-2" />,
     links: [
@@ -47,4 +59,5 @@ export const sidebarLinks = [
       { name: "Best Practices", href: "/docs/best-practices" },
     ],
   },
-];
+  
+*/

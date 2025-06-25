@@ -28,10 +28,6 @@ const CodePlayground = ({
       code: "// Genesis functions\n\nfunc add(a: Int, b: Int) -> Int {\n  return a + b\n}\n\nfunc multiply(a: Int, b: Int) -> Int {\n  return a * b\n}\n\nfunc main() {\n  println(add(5, 3))      // Outputs: 8\n  println(multiply(4, 2)) // Outputs: 8\n}",
     },
     {
-      name: "Data Structures",
-      code: '// Genesis data structures\n\nfunc main() {\n  // Create a dictionary (map)\n  let person = {\n    "name": "Alice",\n    "age": 28,\n    "role": "Developer"\n  }\n\n  // Create an array\n  let numbers = [1, 2, 3, 4, 5]\n  \n  // Transform the array\n  let doubled = numbers.map { $0 * 2 }\n  \n  println("Person: \\(person[\\"name\\"])")\n  println("Doubled numbers: \\(doubled)")\n}',
-    },
-    {
       name: "Control Flow",
       code: '// Genesis control flow\n\nfunc main() {\n  let score = 85\n  \n  // If-else statement\n  if score >= 90 {\n    println("Grade: A")\n  } else if score >= 80 {\n    println("Grade: B")\n  } else if score >= 70 {\n    println("Grade: C")\n  } else {\n    println("Grade: D")\n  }\n  \n  // Switch statement\n  let day = "Monday"\n  switch day {\n    case "Saturday", "Sunday":\n      println("It\'s the weekend!")\n    case "Friday":\n      println("Almost the weekend!")\n    default:\n      println("It\'s a weekday.")\n  }\n}',
     },
@@ -100,7 +96,7 @@ const CodePlayground = ({
               onValueChange={handleExampleChange}
               className="w-[400px]"
             >
-              <TabsList className="grid grid-cols-5">
+              <TabsList className="grid grid-cols-4">
                 <TabsTrigger value="custom">Custom</TabsTrigger>
                 {examples.map((example) => (
                   <TabsTrigger key={example.name} value={example.name}>

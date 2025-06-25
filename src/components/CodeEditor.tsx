@@ -27,10 +27,6 @@ const CodeEditor = ({
       name: "Functions",
       code: "// Genesis functions\n\nfunction add(a, b) {\n  return a + b;\n}\n\nconst multiply = (a, b) => a * b;\n\nconsole.log(add(5, 3));\nconsole.log(multiply(4, 2));",
     },
-    {
-      name: "Data Structures",
-      code: '// Genesis data structures\n\nconst person = {\n  name: "Alice",\n  age: 28,\n  greet() {\n    return `Hello, I\'m ${this.name}`;\n  }\n};\n\nconst numbers = [1, 2, 3, 4, 5];\nconst doubled = numbers.map(n => n * 2);\n\nconsole.log(person.greet());\nconsole.log(doubled);',
-    },
   ],
   onRun = () => {},
 }: CodeEditorProps) => {
@@ -54,7 +50,7 @@ const CodeEditor = ({
       onRun(code);
     } catch (error) {
       setOutput(
-        `Error: ${error instanceof Error ? error.message : String(error)}`,
+        `Error: ${error instanceof Error ? error.message : String(error)}`
       );
     }
   };
@@ -94,7 +90,7 @@ const CodeEditor = ({
               onValueChange={handleExampleChange}
               className="w-[400px]"
             >
-              <TabsList className="grid grid-cols-4">
+              <TabsList className="grid grid-cols-3">
                 <TabsTrigger value="custom">Custom</TabsTrigger>
                 {examples.map((example) => (
                   <TabsTrigger key={example.name} value={example.name}>
