@@ -9,6 +9,7 @@ export const sidebarLinks = [
       { name: "Installation", href: "/docs/installation" },
       { name: "Hello World", href: "/docs/hello-world" },
       { name: "Basic Concepts", href: "/docs/basic-concepts" },
+      { name: "CLI", href: "/docs/cli" },
     ],
   },
   {

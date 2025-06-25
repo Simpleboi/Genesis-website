@@ -8,13 +8,13 @@ export const QuickInstall = () => {
           Quick Installation
         </h2>
         <p className="leading-7 mb-4">
-          The fastest way to get Genesis running is using our installer script.
+          The fastest way to get Genesis running is downloading it from npm.
         </p>
 
-        <h3 className="text-xl font-semibold mt-8 mb-2">macOS & Linux</h3>
+        <h3 className="text-xl font-semibold mt-8 mb-2">npm</h3>
         <pre className="bg-muted p-4 rounded-md overflow-x-auto">
           <code className="text-sm font-mono">
-            {`curl -fsSL https://install.genesis-lang.org | sh`}
+            {`npm install genesis-project`}
           </code>
         </pre>
         <p className="text-sm text-muted-foreground mt-2">

@@ -19,6 +19,7 @@ import { HelloWorldStart } from "@/features/Documentation/GettingStarted/HelloWo
 import { ChevronRight } from "lucide-react";
 import { DocSideBar } from "@/features/Documentation/DocSideBar";
 import { DocIntroduction } from "@/features/Documentation/DocIntroduction";
+import { CLIStart } from "@/features/Documentation/GettingStarted/CLIStart";
 
 // The Documentation page
 const Documentation = () => {
@@ -68,6 +69,8 @@ const Documentation = () => {
                     return <GettingStartedInstallation />;
                   case "hello world":
                     return <HelloWorldStart />;
+                  case "cli":
+                    return <CLIStart />;
 
                   // Language Guide
                   case "syntax":
