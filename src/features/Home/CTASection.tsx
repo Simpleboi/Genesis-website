@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Github } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CTASection = () => {
   return (
@@ -14,11 +15,11 @@ const CTASection = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Build the Future?
+            Ready to Build the Future of Web Development?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Join thousands of developers who are already using Genesis to create
-            faster, safer, and more maintainable applications.
+            Join a growing community of developers who are already using Genesis
+            to create faster, safer, and more maintainable applications.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" variant="secondary" className="gap-2" asChild>
@@ -32,15 +33,14 @@ const CTASection = () => {
               className="gap-2 bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
               asChild
             >
-              <a href="/docs">
-                <Code className="h-5 w-5" />
-                Read the Docs
-              </a>
+              <Link to="/docs">
+                <Code className="h-5 w-5" /> Read the Docs
+              </Link>
             </Button>
           </div>
           <div className="mt-8">
             <a
-              href="https://github.com/genesis-lang"
+              href="https://github.com/Simpleboi/Genesis"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center text-primary-foreground/80 hover:text-primary-foreground transition-colors"

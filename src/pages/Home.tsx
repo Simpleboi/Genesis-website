@@ -22,13 +22,13 @@ const Home = () => {
         <HeroSection isDarkMode={theme === "dark"} />
 
         {/* Stats Banner */}
-        <StatsBanner />
+        {/* <StatsBanner /> */}
 
         {/* Features Section */}
         <FeaturesSection />
 
         {/* Comparison Section */}
-        <ComparisonSection />
+        {/* <ComparisonSection /> */}
 
         {/* Interactive Code Editor */}
         <section className="py-16 px-4 md:px-8 bg-muted/20">
@@ -64,7 +64,7 @@ const Home = () => {
         </section>
 
         {/* Testimonials Section */}
-        <TestimonialSection />
+        {/* <TestimonialSection /> */}
 
         {/* Call to Action Section */}
         <CTASection />

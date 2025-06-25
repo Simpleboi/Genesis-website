@@ -8,20 +8,26 @@ interface NavbarProps {
   isDarkMode?: boolean;
 }
 
+/*
+
+This is for the Nav links 
+{ name: "Download", href: "/download" },
+{ name: "Examples", href: "/examples" },
+{ name: "Community", href: "/community" },
+{ name: "Playground", href: "/playground" },
+
+*/ 
+
+const navLinks = [
+  { name: "Documentation", href: "/docs" },
+];
+
 const Navbar = ({
   onThemeToggle = () => {},
   isDarkMode = false,
 }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
-
-  const navLinks = [
-    { name: "Documentation", href: "/docs" },
-    { name: "Download", href: "/download" },
-    { name: "Examples", href: "/examples" },
-    { name: "Community", href: "/community" },
-    { name: "Playground", href: "/playground" },
-  ];
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
